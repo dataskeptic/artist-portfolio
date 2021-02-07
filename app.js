@@ -11,9 +11,9 @@ const tl = gsap.timeline();
 tl.addLabel("start")
     .from(".box1", {xPercent: -100})
     .addLabel("color")
-    .from(".box2", {yPercent: 100})
+    .from(".box2", {yPercent: -100})
     .addLabel("spin")
-    .from(".box3", {yPercent: -100})
+    .from(".box3", {xPercent: -100})
     .addLabel("end");
 
 ScrollTrigger.create({
