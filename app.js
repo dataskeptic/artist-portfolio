@@ -5,9 +5,6 @@ const hamburger = document.querySelector(".hamburger");
 const navLinks = document.querySelector(".nav-links");
 const links = document.querySelectorAll(".nav-links li");
 
-let width = window.innerWidth;
-width = (width/2) - 100;
-console.log(width);
 
 hamburger.addEventListener('click', () => {
    navLinks.classList.toggle("open");  
@@ -18,19 +15,6 @@ const twen = gsap.timeline({defaults: {ease:'bounce'}});
         .from(".log2", {duration: 2, opacity: 0, y: -500}, "-=1.8")
         .from(".log3", {duration: 2, opacity: 0, y: -300}, "-=1.5")
         .from("nav", {duration: 2, opacity: 0, y: -200, ease:'expo'}, "-=1");
-
-let logo = gsap.timeline({
-    // yes, we can add it to an entire timeline!
-    scrollTrigger: {
-        trigger:".home",
-        pin: true,   // pin the trigger element while active
-        start: "center center", // when the top of the trigger hits the top of the viewport
-        end: "+=500", // end after scrolling 500px beyond the start
-        scrub: 1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-    }
-});
-
-logo.to(".logo", {duration:1, x: -width, scale: 0.3, y: -100, ease:"sine"},"+=4");
 
 
 gsap.defaults({ease: "none", duration: 2});
