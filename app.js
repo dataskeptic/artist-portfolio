@@ -1,15 +1,15 @@
 gsap.registerPlugin(ScrollTrigger); 
 
-
+// Hamburguer icon
 const hamburger = document.querySelector(".hamburger");
 const navLinks = document.querySelector(".nav-links");
 const links = document.querySelectorAll(".nav-links li");
-
 
 hamburger.addEventListener('click', () => {
    navLinks.classList.toggle("open");  
 });
 
+// Logo animation
 const twen = gsap.timeline({defaults: {ease:'bounce'}});
     twen.from(".log1", {duration: 2, opacity: 0, y: -400})
         .from(".log2", {duration: 2, opacity: 0, y: -500}, "-=1.8")
@@ -17,6 +17,7 @@ const twen = gsap.timeline({defaults: {ease:'bounce'}});
         .from("nav", {duration: 2, opacity: 0, y: -200, ease:'expo'}, "-=1");
 
 
+// Galery animation
 gsap.defaults({ease: "none", duration: 2});
 const tl = gsap.timeline();
 
@@ -25,14 +26,14 @@ tl.addLabel("start")
     .addLabel("color")
     .from(".box2", {yPercent: 100})
     .addLabel("spin")
-    .from(".box3", {xPercent: -100})
+    .from(".box3", {yPercent: -100})
     .addLabel("end");
 
 ScrollTrigger.create({
     animation: tl, 
     trigger: "#section",
     start: "top top", 
-    end: "+=4000", 
+    end: "+=4500", 
     scrub: true, 
     pin: true, 
     anticipatePin:  1, 
@@ -43,10 +44,3 @@ ScrollTrigger.create({
         ease: "sine" // the ease of the snap animation ("power3" by default)
       }
 });
-
-const galeria = document.getElementById("galeria");
-    galeria.addEventListener("click", () => {
-        document.querySelector(".foot").scrollIntoView({ 
-            behavior: 'smooth'
-          });
-    });
