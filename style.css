@@ -56,22 +56,14 @@ nav {
 }
 
 .home{    
-    width: 100%;
+    border: 1px solid green;
+    width: 100vw;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
-    background-image: url("./Gi/fundo.png");
-    background-repeat: repeat-x;
-    background-position-y: bottom;
+    background-color: white;
     background-attachment: fixed;
-}
-.back-home {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    opacity: 0.8;
 }
 
 .img{
@@ -82,7 +74,7 @@ nav {
 
 #section {
     background-color: black;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -97,6 +89,7 @@ nav {
     display: flex;
     position: absolute;
     justify-content: center;
+    align-items: center;
 }
 
 .box {
@@ -115,46 +108,9 @@ nav {
     background-color: black(255, 255, 255);
 }
 
-.box .block {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: auto;
-
-}
-.box .block .border {
-    border: 1px solid red;
-    width: 50vh;
-    height: 50vh;
-}
-
-.block {
-    height: 100vh;
-    width: 50%;
-    border: 1px solid gren;
-}
-.block2 {
-    height: 100vh;
-    width: 50%;
-    border: 1px solid #0000ff;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-}
-
-.box .block2 .border {
-    border: 1px solid red;
-    width: 80vh;
-    height: 80vh;
-}
-
-
-
 .border {
-    border: 1px solid red;
-    width: 50vh;
-    height: 50vh;
+    width: 70vh;
+    height: 70vh;
 }
 
 footer {
@@ -167,6 +123,13 @@ footer {
 
 @media screen and (max-width: 768px) {
     
+    .logo h1{
+        font-family: 'Pangolin', cursive;
+        color: #fd0002;
+        font-size: 2rem;
+        padding: 5px;
+    }
+
     .line {
         width: 25px;
         height: 3px;
