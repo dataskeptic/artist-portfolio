@@ -22,24 +22,28 @@ gsap.defaults({ease: "none", duration: 2});
 const tl = gsap.timeline();
 
 tl.addLabel("start")
-    .from(".box1", {xPercent: 100})
-    .addLabel("color")
-    .from(".box2", {yPercent: 100})
-    .addLabel("spin")
-    .from(".box3", {yPercent: -100})
-    .addLabel("end");
+    .from(".box2", {xPercent: 100})
+    .addLabel("snap1")
+    .from(".box3", {yPercent: 100})
+    .addLabel("snap2")
+    .from(".box4", {yPercent: -100})
+    .addLabel("snap3")
+    .from(".box5", {xPercent: 100})
+    .addLabel("snap4")
+    .from(".box6", {yPercent: 100})
+    .addLabel("snap5")
 
 ScrollTrigger.create({
     animation: tl, 
     trigger: "#section",
     start: "top top", 
-    end: "+=4500", 
+    end: "+=6500", 
     scrub: true, 
     pin: true, 
     anticipatePin:  1, 
     snap: {
         snapTo: "labels", // snap to the closest label in the timeline
-        duration: {min: 0.2, max: 1}, // the snap animation should be at least 0.2 seconds, but no more than 3 seconds (determined by velocity)
+        duration: {min: 0.2, max: 0.5}, // the snap animation should be at least 0.2 seconds, but no more than 3 seconds (determined by velocity)
         delay: 0.5, // wait 0.2 seconds from the last scroll event before doing the snapping
         ease: "sine" // the ease of the snap animation ("power3" by default)
       }
