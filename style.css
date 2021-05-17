@@ -63,6 +63,7 @@ nav {
     justify-content: center;
     background-color: white;
     background-attachment: fixed;
+    border: 1px solid white;
 }
 
 #section {
