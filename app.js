@@ -30,8 +30,6 @@ tl.addLabel("start")
     .addLabel("snap3")
     .from(".box5", {xPercent: 100})
     .addLabel("snap4")
-    .from(".box6", {yPercent: 100})
-    .addLabel("snap5")
 
 ScrollTrigger.create({
     animation: tl, 
