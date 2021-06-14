@@ -1,41 +1,43 @@
 gsap.registerPlugin(ScrollTrigger); 
 
-// Hamburguer icon
-const hamburger = document.querySelector(".hamburger");
-const navLinks = document.querySelector(".nav-links");
-const links = document.querySelectorAll(".nav-links li");
-
-hamburger.addEventListener('click', () => {
-   navLinks.classList.toggle("open");  
-});
-
-// Logo animation
-const twen = gsap.timeline({defaults: {ease:'bounce'}});
-    twen.from(".log1", {duration: 2, opacity: 0, y: -400})
-        .from(".log2", {duration: 2, opacity: 0, y: -500}, "-=1.8")
-        .from(".log3", {duration: 2, opacity: 0, y: -300}, "-=1.5")
-        .from("nav", {duration: 2, opacity: 0, y: -200, ease:'expo'}, "-=1");
-
-
 // Galery animation
 gsap.defaults({ease: "none", duration: 2});
 const tl = gsap.timeline();
 
 tl.addLabel("start")
-    .from(".box2", {xPercent: 100})
+    .from(".box1", {scale: 2.5})
+    .addLabel("snap0")
+    .to(".box1", {opacity: 0, duration: 0.5})
+    .fromTo(".box2", {yPercent: -150, scale: 2}, {yPercent: 0, scale: 1})
     .addLabel("snap1")
-    .from(".box3", {yPercent: 100})
+    .from(".box3", {xPercent: 100})
     .addLabel("snap2")
-    .from(".box4", {yPercent: -100})
+    .to(".box1", {opacity: 0, duration: 0.1})
+    .to(".box2", {opacity: 0, duration: 0.1})
+    .to(".box3", {opacity: 0, duration: 0.5})
+    .fromTo(".box4", {opacity: 0, scale: 1}, {opacity: 1, scale: 2})
     .addLabel("snap3")
-    .from(".box5", {xPercent: 100})
-    .addLabel("snap4")
+    .to(".box4", {opacity: 0})
+    .from(".box5", {yPercent: 100})
+    .addLabel("snap5")
+    .from(".box6", {xPercent: -100})
+    .addLabel("snap6")
+    .from(".box7", {yPercent: 100})
+    .addLabel("snap7")
+    .to(".box4", {opacity: 0, duration: 0.1})
+    .to(".box5", {opacity: 0, duration: 0.1})
+    .to(".box6", {opacity: 0, duration: 0.1})
+    .to(".box7", {opacity: 0, duration: 0.5})
+    .fromTo(".box8", {opacity: 0}, {opacity:1})
+    .addLabel("snap7")
+    .to(".box8", {scale: 2})
+    .addLabel("snap9")
 
 ScrollTrigger.create({
     animation: tl, 
     trigger: "#section",
     start: "top top", 
-    end: "+=6500", 
+    end: "+=10000", 
     scrub: true, 
     pin: true, 
     anticipatePin:  1, 
