@@ -21,7 +21,7 @@ tl.addLabel("start")
     .addLabel("snap2")
     .to(".h3", {opacity: 0})
     .to(".box3", {opacity: 0, duration: 0.5})
-    .fromTo(".box4", {opacity: 0, xPercent: -100}, {opacity: 1, xPercent: 0}, "-=0.4")
+    .fromTo(".box4", {opacity: 0, xPercent: -100}, {opacity: 1, xPercent: 0, duration: 2}, "-=0.4")
     .addLabel("snap3")
     .to(".box4", {scale: 2})
     .addLabel("snaplap")
@@ -57,3 +57,4 @@ ScrollTrigger.create({
         ease: "sine" // the ease of the snap animation ("power3" by default)
       }
 });
+// font-family: 'Major Mono Display', monospace;

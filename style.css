@@ -2,6 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Voltaire', sans-serif;
+
 }
 
 #section {
@@ -42,9 +44,10 @@
     }
     h1 {
         display: table;
+        font-size: 2.5rem;
         text-align: center;
         text-justify: auto;
-        color: rgb(224, 209, 209);
+        color: rgb(241, 234, 234);
     }
     .h2 {
         width: 200px;
@@ -72,25 +75,23 @@
 
   }
 
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 700px) {
     .border2, .border3, .border4, .border5, .border6, .border8 {
         height: 99vh;
-        width: fit-content; 
     }  
     
-    .border1, .border7, .border8 {
-        height: fit-content;
+    .border1, .border7 {
         width: 99vw;
     }
     
-    h1 {
+    h1, .h1, .h2, .h3, .h5 {
         display: none;
+        visibility: hidden;
     }
 }
 
 @media only screen and (max-width: 450px) {
     .border1, .border2, .border3, .border4, .border5, .border6, .border7, .border8 {
-        height: fit-content;
         width: 99vw;
     }
     h1 {
