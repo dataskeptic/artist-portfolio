@@ -30,6 +30,30 @@
     background-color: transparent;
 }
 
+.scroll {
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #0e0d0d;
+    position: fixed;
+    top: 55%;
+    left: 50%;
+    z-index: 9;
+}
+
+.scroll {
+    transform: translate(-50%, -50%);
+}
+
+.painting {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 999;
+}
+
+.painting {
+    transform: translate(-50%, -50%);
+}
 
 @media screen and (min-width: 600px) {
     .border1, .border2, .border3, .border4, .border5, .border6, .border7, .border8 {
@@ -43,7 +67,6 @@
         justify-content: space-evenly;
     }
     h1 {
-        display: table;
         font-size: 2.5rem;
         text-align: center;
         text-justify: auto;
@@ -84,7 +107,7 @@
         width: 99vw;
     }
     
-    h1, .h1, .h2, .h3, .h5 {
+    .h1, .h2, .h3, .h4, .h5 {
         display: none;
         visibility: hidden;
     }
@@ -94,8 +117,9 @@
     .border1, .border2, .border3, .border4, .border5, .border6, .border7, .border8 {
         width: 99vw;
     }
-    h1 {
+    .h1, .h2, .h3, .h4, .h5 {
         display: none;
+        visibility: hidden;
     }
 }
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 

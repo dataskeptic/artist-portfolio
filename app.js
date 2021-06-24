@@ -1,10 +1,21 @@
 gsap.registerPlugin(ScrollTrigger); 
 
+
+window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+}
+
+
+const twen = gsap.timeline({defaults: {ease:'bounce.out', duration: 1.5}});
+    twen.fromTo(".scroll", {yPercent: -500, opacity: 0, scale: 0.4}, {yPercent: 0, opacity: 1, scale: 0.4}, "+=1");
+
 // Galery animation
 gsap.defaults({ease: "none", duration: 2});
 const tl = gsap.timeline();
 
 tl.addLabel("start")
+    .fromTo(".scroll", {opacity: 1}, {opacity:0, duration: 0.6})
+    .addLabel("starfft")
     .from(".box1", {scale: 2.5})
     .addLabel("snap0")
     .to(".box1", {yPercent: 100, opacity: 0}, "+=0.5")
@@ -36,10 +47,13 @@ tl.addLabel("start")
     .to(".box6", {opacity: 0})
     .from(".box7", {yPercent: 100}, "-=2")
     .addLabel("snappe")
-    .to(".box7", {opacity: 0, duration: 0.5})
-    .fromTo(".box8", {opacity: 0}, {opacity:1})
+    .to(".box7", {opacity: 0, duration: 2}, "+=0.5")
+    .fromTo(".painting", {opacity: 0}, {opacity: 1})
+    .addLabel("snappooo")
+    .to(".painting", {opacity: 0}, "+=1")
+    .fromTo(".box8", { yPercent: 100}, {yPercent: 0}, "-=0.5")
     .addLabel("snappa")
-    .to(".box8", {scale: 2})
+    .to(".box8", {scale: 2}, "+=1")
     .addLabel("snap9")
 
 ScrollTrigger.create({
