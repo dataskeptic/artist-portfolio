@@ -6,6 +6,13 @@
 
 }
 
+h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    text-justify: auto;
+    color: rgb(241, 234, 234);
+}
+
 #section {
     background-color:#0e0d0d;
     width: 100%;
@@ -66,12 +73,6 @@
     .box3, .box5, .box6{
         justify-content: space-evenly;
     }
-    h1 {
-        font-size: 2.5rem;
-        text-align: center;
-        text-justify: auto;
-        color: rgb(241, 234, 234);
-    }
     .h2 {
         width: 200px;
         height: 150px;
@@ -114,8 +115,17 @@
 }
 
 @media only screen and (max-width: 450px) {
+    
+    h1 {
+        font-size: 2rem;
+        text-align: center;
+        text-justify: auto;
+        color: rgb(241, 234, 234);
+    }
+
     .border1, .border2, .border3, .border4, .border5, .border6, .border7, .border8 {
         width: 99vw;
+        height: fit-content;
     }
     .h1, .h2, .h3, .h4, .h5 {
         display: none;
