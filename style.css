@@ -14,7 +14,7 @@ h1 {
 }
 
 #section {
-    background-color:#0e0d0d;
+    background-color: #0e0d0d;
     width: 100%;
     height: 100vh;
     display: flex;
@@ -63,8 +63,47 @@ h1 {
     transform: translate(-50%, -50%);
 }
 
-h1, h2, h3, h4, h5 {
+.h1, .h2, .h3, .h4, .h5 {
     opacity: 0;
+}
+
+footer {
+    background-color: #0e0d0d;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100vh;
+}
+
+.about {
+    background-color: #000000;
+    padding: 20px 20px;
+    border-radius: 30px;
+    height: 75%;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+}
+h4 {
+    margin: 10px 0;
+    color: rgb(241, 234, 234);
+}
+p {
+    margin: 10px auto;
+    color: rgb(241, 234, 234);
+}
+.artist {
+    margin: 10px auto;
+    border-radius: 300px;
+    width: 85%;  
+}
+
+.contact {
+    background-color: #000000;
+    border-radius: 30px;
+    height: 75%;
+    width: 35%;
 }
 
 @media screen and (min-width: 600px) {
