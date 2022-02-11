@@ -53,7 +53,7 @@ tl.addLabel("start")
     .to(".painting", {opacity: 0}, "+=1")
     .fromTo(".box8", { yPercent: 100}, {yPercent: 0}, "-=0.5")
     .addLabel("snappa")
-    .to(".box8", {scale: 2}, "+=1")
+    .fromTo(".box8", {opacity: 0}, { opacity: 0, scale: 2}, "+=1")
     .addLabel("snap9")
 
 ScrollTrigger.create({
