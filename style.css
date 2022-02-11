@@ -21,8 +21,10 @@ h1 {
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    display: -webkit-box;
     display:-webkit-flex;
     -webkit-flex-direction: column;
+    -webkit-appearance: none;
 }
 
 .box1, .box2, .box3, .box4, .box5, .box6, .box7, .box8{
@@ -33,9 +35,11 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
+    display: -webkit-box;
     display:-webkit-flex;
     -webkit-align-items: center;
     -webkit-justify-content: center;
+    -webkit-appearance: none;
 
 }
 
