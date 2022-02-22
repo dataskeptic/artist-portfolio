@@ -306,9 +306,9 @@ input[type=text] {
 
     .border1, .border2, .border3, .border4, .border5, .border6, .border7, .border8 {
         width: 99%;
-        height: -webkit-fit-content;
+       /*  height: -webkit-fit-content;
         height: -moz-fit-content;
-        height: fit-content;
+        height: fit-content; */
     }
     .h1, .h2, .h3, .h4, .h5 {
         display: none;
